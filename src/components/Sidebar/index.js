@@ -1,16 +1,14 @@
-import { Link, NavLink } from 'react-router-dom'
-import'./index.scss'
-import LogoS from '../../assets/images/logo-s.png'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { Link, NavLink } from 'react-router-dom';
+import './index.scss';
+import LogoS from '../../assets/images/logo-s.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => (
     <div className='nav-bar'>
         <Link className='logo' to='/'>
-            <img src={LogoS} alt ="logo" />
-            <img className ="sub-logo" src={LogoSubtitle} alt ="Slobodan" />
+            <img src={LogoS} alt="logo" />
         </Link>
         <nav>
             <NavLink exact="true" activeclassname="active" to="/">
@@ -25,18 +23,25 @@ const Sidebar = () => (
         </nav>
         <ul>
             <li>
-                <a target ="_blank" rel='noreferrer' href='https://www.linkedin.com/in/yaqub-hasan/'>
-                    <FontAwesomeIcon icon ={faLinkedin} color ="#4d4d4e"/>
+                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yaqub-hasan/" className="icon">
+                    <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+                    <div className="tooltip">LinkedIn</div>
                 </a>
             </li>
             <li>
-                <a target ="_blank" rel='noreferrer' href='https://github.com/YaqubH'>
-                    <FontAwesomeIcon icon ={faGithub} color ="#4d4d4e"/>
+                <a target="_blank" rel="noreferrer" href="https://github.com/YaqubH" className="icon">
+                    <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+                    <div className="tooltip">Github</div>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" rel="noreferrer" href="mailto:yaqubhasann@gmail.com" className="icon">
+                    <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+                    <div className="tooltip">Email</div>
                 </a>
             </li>
         </ul>
     </div>
-)
+);
 
-
-export default Sidebar
+export default Sidebar;
