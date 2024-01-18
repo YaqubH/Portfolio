@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
-import LogoS from '../../../assets/images/logo-s.png'
-import './index.scss'
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap-trial';
+//import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
+//import LogoS from '../../../assets/images/logo-s.png';
+import './index.scss';
 
 const Logo = () => {
   const bgRef = useRef()
@@ -10,7 +10,7 @@ const Logo = () => {
   const solidLogoRef = useRef()
 
   useEffect(() => {
-    gsap.registerPlugin(DrawSVGPlugin)
+    // gsap.registerPlugin(DrawSVGPlugin)
 
     gsap
       .timeline()
@@ -40,7 +40,7 @@ const Logo = () => {
 
   return (
     <div className="logo-container" ref={bgRef}>
-      <img ref={solidLogoRef} className="solid-logo" src={LogoS} alt="JavaScript,  Developer"/>
+      {/* <img ref={solidLogoRef} className="solid-logo" src={LogoS} alt="JavaScript,  Developer"/> */}
 
       <svg
         width="559pt"
@@ -50,7 +50,7 @@ const Logo = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
-          className="svg-container"
+          //className="svg-container"
           transform="translate(0 457) scale(.1 -.1)"
           fill="none"
         >
