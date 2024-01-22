@@ -34,12 +34,6 @@ const Sidebar = () => (
                     <div className="tooltip">Github</div>
                 </a>
             </li>
-            <li>
-                <a target="_blank" rel="noreferrer" href="mailto:yaqubhasann@gmail.com" className="icon">
-                    <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-                    <div className="tooltip">Email</div>
-                </a>
-            </li>
         </ul>
     </div>
 );
