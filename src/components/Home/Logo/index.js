@@ -10,7 +10,6 @@ const Logo = () => {
   const solidLogoRef = useRef()
 
   useEffect(() => {
-    // gsap.registerPlugin(DrawSVGPlugin)
 
     gsap
       .timeline()
