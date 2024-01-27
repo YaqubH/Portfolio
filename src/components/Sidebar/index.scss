@@ -76,6 +76,10 @@
               content: 'CONTACT';
           }
 
+          &.portfolio-link:after {
+            content: 'PORTFOLIO';
+        }
+
           &.active svg {
               color: #0c304e;
           }
