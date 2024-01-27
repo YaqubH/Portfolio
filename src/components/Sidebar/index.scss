@@ -1,92 +1,109 @@
 .nav-bar {
-  background: #6e6e6e;
-  width: 60px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 3;
-  min-height: 500px;
-
-  .logo {
-      display: block;
-      padding: 2px 0;
-
-      img {
-          display: block;
-          margin: 10px auto;
-          width: 35px;
-          height: auto;
-          animation: rotateIn 1s linear both;
-          animation-delay: 1.4s;
-      }
-  }
-
-  nav {
-    display: block;
-    text-align: center;
+    background: #181818;
+    width: 60px;
+    height: 100%;
     position: absolute;
-    height: 210px;
-    top: 50%;
-    margin-top: -120px;
-    width: 100%;
-
-      a {
-          font-size: 22px;
-          color: #020203;
-          display: block;
-          line-height: 51px;
-          height: 51px;
-          position: relative;
-          text-decoration: none;
-
-          &:hover {
-              color: #000000;
-
-              svg {
-                  opacity: 0;
-              }
-
-              &:after {
-                  opacity: 1;
-              }
-          }
-
-          &:after {
-              content: '';
-              font-size: 9px;
-              letter-spacing: 2px;
-              position: absolute;
-              bottom: 0;
-              display: block;
-              width: 100%;
-              text-align: center;
-              opacity: 0;
-              transition: all 0.3s ease-out;
-          }
-
-          &:first-child:after {
-              content: 'HOME';
-          }
-
-          &.about-link:after {
-              content: 'ABOUT';
-          }
-
-          &.contact-link:after {
-              content: 'CONTACT';
-          }
-
-          &.portfolio-link:after {
-            content: 'PORTFOLIO';
+    top: 0;
+    z-index: 3;
+    min-height: 500px;
+  
+    .logo {
+      display: block;
+      padding: 8px 0;
+  
+      img {
+        display: block;
+        margin: 8px auto;
+        width: 24px;
+        height: auto;
+  
+        &.sub-logo {
+          width: 50px;
         }
-
-          &.active svg {
-              color: #0c304e;
-          }
       }
-  }
-
-  ul {
+    }
+  
+    nav {
+      display: block;
+      text-align: center;
+      position: absolute;
+      height: 210px;
+      top: 50%;
+      margin-top: -120px;
+      width: 100%;
+  
+      a {
+        font-size: 22px;
+        color: #4d4d4e;
+        display: block;
+        line-height: 51px;
+        height: 51px;
+        position: relative;
+        text-decoration: none;
+  
+        i {
+          transition: all 0.3s ease-out;
+        }
+  
+        &:hover {
+          color: #ffd700;
+  
+          svg {
+            opacity: 0;
+          }
+  
+          &:after {
+            opacity: 1;
+          }
+        }
+  
+        &:after {
+          content: '';
+          font-size: 9px;
+          letter-spacing: 2px;
+          position: absolute;
+          bottom: 0;
+          display: block;
+          width: 100%;
+          text-align: center;
+          opacity: 0;
+          -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+        }
+  
+        &:first-child {
+          &:after {
+            content: 'HOME';
+          }
+        }
+      }
+  
+      a.about-link {
+        &:after {
+          content: 'ABOUT';
+        }
+      }
+  
+      a.contact-link {
+        &:after {
+          content: 'CONTACT';
+        }
+      }
+  
+      a.portfolio-link {
+        &:after {
+          content: 'PORTFOLIO';
+        }
+      }
+  
+      a.active {
+        svg {
+          color: #ffd700;
+        }
+      }
+    }
+  
+    ul {
       position: absolute;
       bottom: 10px;
       width: 100%;
@@ -144,5 +161,123 @@
               }
           }
       }
+  } 
+
+  ul {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+
+    li {
+        a {
+            padding: 5px 0;
+            display: block;
+            font-size: 20px;
+            line-height: 30px;
+            color: #4d4d4e;
+
+            &.icon {
+                position: relative;
+                cursor: pointer;
+
+                .tooltip {
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    transform: translateY(-50%);
+                    padding: 10px;
+                    margin-left: 10px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all 0.3s;
+                    border-radius: 15px;
+                    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+                                inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                                5px 5px 15px rgba(0, 0, 0, 0.3),
+                                -5px -5px 15px rgba(255, 255, 255, 0.1);
+                    background: #2a2b2f;
+                    border: 1px solid rgba(11, 63, 95, 1);
+                    color: #fff;
+                    visibility: hidden;
+                    white-space: nowrap;
+                }
+
+                &:hover {
+                    .tooltip {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: auto;
+                    }
+                }
+            }
+
+            &:hover {
+                color: #ffd700;
+            }
+        }
+    }
+}
+  
+  .hamburger-icon, .close-icon {
+    display: none;
+  }
+  
+  
+  @media screen and (max-width: 1200px) {
+    .nav-bar { 
+      background: transparent;
+      position: initial;
+      height: auto;
+      min-height: auto;
+  
+       ul, nav {
+        display: none;
+       }
+  
+       nav {
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: #181818;
+        height: 100%;
+        margin: 0;
+        z-index: 2;
+        position: fixed;
+  
+        &.mobile-show {
+          display: block;
+        }
+  
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        a:after {
+          opacity: 1;
+          position: initial;
+          width: auto;
+          margin-left: 10PX;
+        }
+  
+        a svg {
+          opacity: 1 !important;
+        }
+       }
+  
+       .hamburger-icon,
+       .close-icon {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          display: block;
+       }
+    }
   }
 }
