@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
@@ -44,7 +44,7 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested.......
+            Got a project in mind or just want to say hi? Drop me a message below—I'd love to hear from you!
           </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
@@ -90,14 +90,14 @@ const Contact = () => {
           <span>Yaqubhasann@gmail.com</span>
         </div>
       </div>
-        <div className="map-wrap">
+        {/* <div className="map-wrap">
           <MapContainer center={[33.6424, -117.8417]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[33.6424, -117.8417]}>
               <Popup>This is where I attend university</Popup>
             </Marker>
           </MapContainer>
-        </div>
+        </div> */}
       <Loader type="ball-clip-rotate-multiple"></Loader>
     </>
   )

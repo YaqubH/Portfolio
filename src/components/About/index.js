@@ -2,14 +2,7 @@ import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faPython,
-    faCss3,
-    faGitAlt,
-    faHtml5,
-    faJsSquare,
-    faReact,
-  } from '@fortawesome/free-brands-svg-icons';
+import {faPython, faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
 
 const About = () =>{
@@ -32,12 +25,23 @@ const About = () =>{
                         idx={15}
                     />
                 </h1>
-                <p> My name is Yaqub.......</p>
-                <p> Ive done all these projects......</p>
-                <p> My goals are....</p>
+                <p> Welcome! I'm Yaqub Hasan, a devoted coder with a deep-rooted love for crafting 
+                    code that breathes life into innovative applications. My academic path in Computer 
+                    Science at the University of California, Irvine, is fueled by a fascination for the 
+                    limitless potential of programming languages. Fluent in JavaScript, Python, HTML, and CSS, 
+                    I relish the challenge of transforming complex problems into elegant software solutions.</p>
+                <p> The thrill of coding is my driving force; it's a craft I continually refine with every line of 
+                    code I write. My journey is marked by a series of engaging projects where I've applied my skills 
+                    in SQL and various software and tools to develop applications that are as robust in functionality 
+                    as they are intuitive in design. From the intricacies of algorithm design to the finesse of user 
+                    interface development, my projects are a testament to my commitment to quality and efficiency in 
+                    software development.</p>
+                <p> For those who share my passion for technology and innovation, I invite you to explore the portfolio 
+                    section of my site, where my projects stand as milestones along my coding journey. Whether you're seeking 
+                    a collaborative development experience or a dedicated individual to bring fresh perspectives to your team, 
+                    I am excited about the opportunity to connect and contribute to your vision with the same zeal that coding 
+                    ignites in me.</p>
             </div>
-
-
             <div className="stage-cube-cont">
              <div className="cubespinner">
               <div className="face1">

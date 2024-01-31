@@ -83,12 +83,13 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            background: #9e68ef;
+            background: #fff;
+            color: #333;
         }
 
         &:after {
             content: "";
-            background: linear-gradient(180deg, #7a14e7, #000);
+            background: linear-gradient(180deg, #a63ae1, #000);
             position: absolute;
             left: 0;
             right: 0;
