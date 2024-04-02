@@ -3,7 +3,7 @@ import { useState } from 'react'
 import LogoS from '../../assets/images/logo-s.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faHome, faUser, faEnvelope, faSuitcase, faBars, faClose } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faEnvelope, faSuitcase, faBars, faClose, faFile } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
@@ -66,6 +66,12 @@ const Sidebar = () => {
                 <a target="_blank" rel="noreferrer" href="https://github.com/YaqubH" className="icon">
                     <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
                     <div className="tooltip">Github</div>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1I0MubNdy98SEK_98Xz4dvED-e26dlHED/view?usp=sharing" className="icon">
+                    <FontAwesomeIcon icon={faFile} color="#4d4d4e" />
+                    <div className="tooltip">Resume</div>
                 </a>
             </li>
         </ul>
